@@ -1,7 +1,102 @@
 // Mon fichier Js
+function objectJsPartie2(){
+	var maDivision = document.getElementById('maDiv');
+	console.log(maDivision);
+}
 
-// IIFE : Immediately-Invoked Function Expression
-(function(){
+objectJsPartie2();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function objetJs(){
+	console.log('Bienvenue.', 'ObjetJs');
+
+	function roulerJeunesse(){
+		console.log('rouler jeunesse');
+	}
+
+	var variableJaune = "jaune";
+	
+
+	var voiture = {
+		// Propriété = (key : valeur)
+		couleur : variableJaune, // "jaune",
+		vitesse : 0,
+		pneus : {
+			nombre : {
+				quantite : 4,
+				metadata : {
+					point : 3
+				}
+			},
+			user : function(){
+				console.log("On use les pneus");
+			},
+
+		},
+		rouler : function (){
+			console.log("vroom vroom");
+			this.vitesse++;
+			console.log("Vitesse: ", this.vitesse);
+		},
+		getMetadata: function(){
+			return this.pneus.nombre.metadata;
+		}
+	};
+
+
+	console.log("Voiture ==> ", voiture);
+	console.log("Pneus: ", voiture.pneus.nombre.metadata);
+	console.log("Metadata: ", voiture.metadata);
+	console.log("Get Metadata: ", voiture.getMetadata());
+
+	
+	// console.log("Couleur ==> ", voiture.couleur);
+	// console.log("Couleur bis ==> ", voiture["couleur"]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function scope(){
 	var philippe;// undefined
 	console.log('Bienvenue.', 'Ca va ?');
 	
@@ -53,7 +148,5 @@
 	rouler();
 	// freiner();
 	// Scope : batiment , rouler, freiner
-
-
-})();
+}
 
