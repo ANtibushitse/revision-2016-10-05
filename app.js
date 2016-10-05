@@ -1,7 +1,36 @@
 // Mon fichier Js
 function objectJsPartie2(){
-	var maDivision = document.getElementById('maDiv');
-	console.log(maDivision);
+	// Noeud DOM
+	var maDivDOM = document.getElementById('maDiv'); // Vanilla Js
+	// console.log(maDivDOM.innerHTML);
+
+	// Objet Jquery : avec des pouvoirs jquery
+	var maDivJq = $('#maDiv');
+	// console.log(maDivJq.html());
+
+	var maDivDOMpuisJq = $(maDivDOM);
+	// console.log(maDivDOMpuisJq.html());
+
+	var buttons = $('button'); 
+	// 'tableau Jquery' qui contient des noeuds classiques DOM
+	
+	console.log(buttons);
+
+	console.log(buttons[2]);
+	var btn2 = $(buttons[2]);
+	console.log(btn2);
+
+	 // tableau
+	$('button').click(callback);
+
+	function callback(){
+		var btnDOM = this;
+		var btnJq = $(btnDOM);
+		console.log(btnJq.css('border'));
+
+		var html = $(this).html();
+		var val = $(this).val();
+	}
 }
 
 objectJsPartie2();
